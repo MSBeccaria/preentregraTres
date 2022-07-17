@@ -389,6 +389,7 @@ body #mainAgenda .carteleraItem {
 }
 
 /* HASTA ACA AGENDA*/
+
 /*CONTACTO*/
 body .gridConteinerContacto {
   display: -ms-grid;
@@ -429,7 +430,18 @@ body .p2 {
 }
 
 body .mainContact__form {
-  background-color: #E6C693;
+  background-color:#e9bf4b;
+}
+.mainContact__form textarea{
+  background-color:white;
+  border-color: none;
+  width: 100%;
+}
+.btn-primary{
+    background-color: #CE5C16;
+    border-color:chocolate;
+    color:bisque;
+    margin-top: 20px;
 }
 
 /*APLICO MEDIAQUERIES EN CONTACTO PARA VISTA MOBILE*/
@@ -459,7 +471,10 @@ body .mainContact__form {
             align-items: center;
   }
   .mainContact__form {
-    width: 100%;
+    width: 90%;
   }
+  .mainContact__form textarea{
+    width: 100%;
+}
 }
 /*# sourceMappingURL=styles.css.map */

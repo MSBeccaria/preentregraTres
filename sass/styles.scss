@@ -319,7 +319,17 @@ body{
         color:#2C8AA0;
     }
     .mainContact__form{
-        background-color:#E6C693;
+        background-color:#e9bf4b;
+    }
+    .mainContact__form textarea{
+        background-color:white;
+        border-color: none;
+        width: 100%;
+    .btn-primary{
+        background-color: #CE5C16;
+        border-color:chocolate;
+        color:bisque;
+        margin-top: 20px;
     }
 
 }
@@ -342,6 +352,12 @@ body{
     }
 
     .mainContact__form{
+        width: 90%;
+    }
+    textarea{
         width: 100%;
     }
+
+
+
 }
