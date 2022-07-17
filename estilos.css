@@ -5,6 +5,10 @@
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
+body{
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,250,242,1) 50%, rgba(255,250,242,1) 65%,
+     rgba(252,204,173,1) 84%, rgba(251,185,144,1) 100%);
+}
 /* familia tipográfica: Monteserrat Alternates light
 Códigos de colores ultilizados:
 azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
@@ -67,6 +71,8 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
 
 }
 
+
+
 /*FOOTER---------------------------------------------------------------*/
 #footer{
     display: flex;
@@ -74,8 +80,8 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     align-items: center;
     background-color:#CE5C16;
     height: 80px;
+    width: 100%;
     margin top: 10px;
-    
 
 }
 
@@ -138,17 +144,17 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     grid-template-areas: "header"
                           "main"
                           "footer";
-    grid-template-rows: 200px 1080px 50px;
+    grid-template-rows: 200px 1100px 50px;
     gap: 5px;  
     align-items: center; 
 }      
 
 #mainNosotras{
     display:grid;
-    grid-template-columns:2fr 1fr;
+    grid-template-columns:2fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 6px;
-    grid-row-gap: 9p;
+    grid-row-gap: 10px;
     padding-left: 90px;
     padding-right: 90px;
 }
@@ -170,6 +176,10 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     filter: grayscale(100%);
 }
 
+#mainNosotras span{
+    font-weight: bold;
+}
+
 
 /* APLICO MEDIAQUERIE EN SOBRE NOSOTRAS PARA VISTA MOBILE*/
 
@@ -180,7 +190,7 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
         grid-template-areas: "header"
                               "main"
                               "footer";
-        grid-template-rows: 200px 1200px 50px;
+        grid-template-rows: 200px 2100px 50px;
         gap: 5px;  
         align-items: center; 
     }
@@ -216,27 +226,41 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     grid-template-areas: "header"
                           "main"
                           "footer";
-    grid-template-rows: 200px 800px 50px;
+    grid-template-rows: 150px 1800px 50px;
     gap: 5px;  
-    align-items: center; 
-}    
-
-#mainMusica{
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 5px;
-        grid-row-gap: 20px;
-        align-items: center;
-        
 
 }
 
+#mainMusica{
+    display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+}
+
+
+.iframe{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 10px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
 #mainMusica h1{
     text-align: left;
-    margin-bottom: 20px;
+    padding: bottom 10px;
+    padding-top:30px;
 }
 
 /*APLICO MEDIAQUERIES EN MUSICA PARA VISTA MOBILE*/
@@ -247,7 +271,7 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
         grid-template-areas: "header"
                               "main"
                               "footer";
-        grid-template-rows: 200px 800px 50px;
+        grid-template-rows: 200px 1300px 50px;
         gap: 5px;  
         align-items: center;
         padding-left: 5px; 
@@ -255,9 +279,38 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     }
     
     #mainMusica{
-        width: 100%;
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-bottom: 10px;
+       
     }
-  
+
+    .iframe{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+      }
+    
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    
+    #mainMusica h1{
+        text-align: left;
+        padding-bottom: 10px;
+        
+    }
+
 
     #footer{
         display: flex;
@@ -283,8 +336,8 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     align-items: center; 
 }
 #mainAgenda{
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #mainAgenda h1{
@@ -309,7 +362,11 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
 
 .mainAgenda__cartelera .carteleraItem .btn{
     width: 80px;
-}    
+}  
+
+.carteleraItem:hover{
+    transform: scale(1.5);
+}
 
 /*APLICO MEDIAQUERIES EN AGENDA PARA VISTA MOBILE*/
 @media(max-width:768px){
@@ -320,7 +377,7 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
                               "main"
                               "footer";
         grid-template-rows: 200px 1300px 50px;
-        gap: 5px;  
+        row-gap: 5px;  
         align-items: center; 
     }
     
@@ -338,6 +395,11 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
 
     .carteleraItem{
         width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .carteleraItem:hover{
+        transform:none;
     }
 
     #footer{
@@ -368,8 +430,8 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     grid-template-rows: 400px;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 40px;
+    padding-right: 40px;
     gap:60px;
     margin-bottom: 20px;
 }
@@ -385,6 +447,20 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
 
 .mainContact__form{
     background-color:#E6C693;
+}
+
+.mainContact__form textarea{
+    background-color:white;
+    border-color: none;
+    width: 100%;
+    
+}
+
+.mainContact__form .btn-primary{
+    background-color: #CE5C16;
+    border-color:chocolate;
+    color:bisque;
+    margin-top: 20px;
 }
 
 /*APLICO MEDIAQUERIES EN CONTACTO PARA VISTA MOBILE*/
@@ -408,8 +484,18 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     }
 
     .mainContact__form{
+        width: 90%
+        
+    }
+    
+    .mainContact__form textarea{
         width: 100%;
     }
     
 }    
+
+   
+
+
+
 

@@ -127,9 +127,7 @@ body .MainInicio p {
 
 /* HASTA ACÁ INDEX*/
 /*PAGINA NOSOTRAS*/
-body {
-  /*MAPS*/
-}
+
 
 body .gridConteinerNosotras {
   display: -ms-grid;
@@ -137,7 +135,7 @@ body .gridConteinerNosotras {
       grid-template-areas: "header"
  "main"
  "footer";
-  -ms-grid-rows: 200px 1080px 50px;
+  -ms-grid-rows: 200px 1180px 50px;
       grid-template-rows: 200px 1080px 50px;
   gap: 5px;
   -webkit-box-align: center;
@@ -148,7 +146,7 @@ body .gridConteinerNosotras {
 body #mainNosotras {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
+  -ms-grid-columns: 2fr 2fr;
       grid-template-columns: 2fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -169,17 +167,11 @@ body .mainNosotras__foto2:hover {
           filter: grayscale(100%);
 }
 
-body .voz-sopra {
-  color: orange;
+#mainNosotras span{
+  font-weight: bold;
 }
 
-body .voz-mezzo {
-  color: darkblue;
-}
 
-body .voz-contra {
-  color: chocolate;
-}
 
 /* APLICO MEDIAQUERIE EN SOBRE NOSOTRAS PARA VISTA MOBILE*/
 @media (max-width: 768px) {
