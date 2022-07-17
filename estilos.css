@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* familia tipográfica: Monteserrat Alternates light
+Códigos de colores ultilizados:
+azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
+
+/* ESTRUCTURA GRID INDEX*/
+
+.gridConteinerIndex{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 1000px 50px;
+    gap: 5px;  
+    align-items: center;                    
+                          
+}
+
+/*cambios al navbar bootstrap*/
+
+.bg-color-propio{
+    background-color:white;
+}
+
+.nav-item a{
+    font-size:xx-large;
+    color:black;
+}
+
+.navbar-nav .nav-item a:hover{
+    color:#2C8AA0;
+    font-weight: bold;
+
+}
+
+
+/* transformacion*/
+
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.MainInicio .MainInicio__texto{
+    min-height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items:center;
+    padding-left: 5px;
+    font-size: 70px;
+    color:black;
+    font-weight: bold;
+    animation-name: aparecer;
+    animation-duration: 7s;
+    animation-iteration-count:infinite
+
+}
+
+/*FOOTER---------------------------------------------------------------*/
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#CE5C16;
+    height: 80px;
+    margin top: 10px;
+    
+
+}
+
+#footer a{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+
+
+/* APLICO MEDIAQUERIE EN INDEX PARA VISTA MOBILE*/
+
+
+
+@media(max-width:768px){
+
+
+    .gridConteinerIndex{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 600px 50px;
+        gap: 5px;  
+        align-items: center;
+    }                    
+                              
+    
+     .MainInicio .MainInicio__texto{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content:center;
+        align-items: center;
+        align-content: center;
+        font-size: 5vh;
+        color:black;
+        font-weight: bold;
+    }
+
+ 
+
+    #footer{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color:#CE5C16;
+       height: 80px;
+       width: 100%;
+       margin-top: 3px;
+    }
+}       
+/*HASTA ACÁ MEDIAQUERY INDEX-----------------------------------------*/
+
+
+/*SOBRE NOSOTRAS*/
+
+.gridConteinerNosotras{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 1080px 50px;
+    gap: 5px;  
+    align-items: center; 
+}      
+
+#mainNosotras{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 6px;
+    grid-row-gap: 9p;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+#mainNosotras .mainNosotras__foto1,
+#mainNosotras .mainNosotras__foto2{
+    width: 500px;
+}
+
+.mainNosotras__foto1,
+.mainNosotras__foto2 {
+    transition: 2s;
+}
+
+.mainNosotras__foto1:hover{
+    filter: grayscale(100%);
+}
+.mainNosotras__foto2:hover{
+    filter: grayscale(100%);
+}
+
+
+/* APLICO MEDIAQUERIE EN SOBRE NOSOTRAS PARA VISTA MOBILE*/
+
+@media(max-width:768px){
+  
+    .gridConteinerNosotras{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 1200px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }
+
+
+
+    #mainNosotras{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    #mainNosotras .mainNosotras__foto1,
+    #mainNosotras .mainNosotras__foto2{
+         width:80%;
+    } 
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#CE5C16;
+        height: 80px;
+        width: 100%;
+     }
+} 
+
+/*MUSICA*/
+
+.gridConteinerMusica{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 800px 50px;
+    gap: 5px;  
+    align-items: center; 
+}    
+
+#mainMusica{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 20px;
+        align-items: center;
+        
+
+}
+
+
+#mainMusica h1{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/*APLICO MEDIAQUERIES EN MUSICA PARA VISTA MOBILE*/
+@media(max-width:768px){
+   
+    .gridConteinerMusica{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 800px 50px;
+        gap: 5px;  
+        align-items: center;
+        padding-left: 5px; 
+        padding-right: 5px;
+    }
+    
+    #mainMusica{
+        width: 100%;
+    }
+  
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#CE5C16;
+        height: 80px;
+        width: 100%;
+     }
+}    
+
+
+
+/*AGENDA*/
+
+.gridConteinerAgenda{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 700px 50px;
+    gap: 5px;  
+    align-items: center; 
+}
+#mainAgenda{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+#mainAgenda h1{
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+.mainAgenda__cartelera{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:3fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.mainAgenda__cartelera .carteleraItem{
+    width: 300px;
+}
+
+.mainAgenda__cartelera .carteleraItem .btn{
+    width: 80px;
+}    
+
+/*APLICO MEDIAQUERIES EN AGENDA PARA VISTA MOBILE*/
+@media(max-width:768px){
+
+    .gridConteinerAgenda{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 1300px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }
+    
+    .mainAgenda__cartelera{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 0;
+    }
+
+    .carteleraItem{
+        width: 100%;
+    }
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#CE5C16;
+        height: 80px;
+        width: 100%;
+     }
+}    
+
+
+/*CONTACTO*/
+.gridConteinerContacto{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 700px 50px;
+    gap: 5px;  
+    align-items: center; 
+}
+
+#mainContact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding-left: 90px;
+    padding-right: 90px;
+    gap:60px;
+    margin-bottom: 20px;
+}
+
+.mainContact__datos .p1{
+    font-size: large;
+} 
+
+.mainContact__datos .p2{
+    font-size: large;
+    color:#2C8AA0;
+} 
+
+.mainContact__form{
+    background-color:#E6C693;
+}
+
+/*APLICO MEDIAQUERIES EN CONTACTO PARA VISTA MOBILE*/
+@media(max-width:768px){
+
+    .gridConteinerContacto{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 800px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }
+    
+    #mainContact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .mainContact__form{
+        width: 100%;
+    }
+    
+}    
+
